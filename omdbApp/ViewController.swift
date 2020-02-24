@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, OmdbDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var lblOutput: UILabel!
     @IBOutlet weak var txtInput: UITextField!
@@ -26,7 +26,10 @@ class ViewController: UIViewController, OmdbDelegate {
     }
     
     @IBAction func btnShowPoster(_ sender: Any) {
-        omdb?.onShowPoster(poster: posterURL)
+        print(posterURL)
+        let pvc: PosterController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PosterVC") as! PosterController
+        pvc.posterURL = posterURL
+        self.present(pvc, animated: true, completion: nil)
     }
     
 
@@ -48,7 +51,7 @@ class ViewController: UIViewController, OmdbDelegate {
                         
                             let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                         
-                            if jsonResult["Error"] == nil {
+                            if jsonResult["Error"] as? NSString == nil {
                                     msgError = "no error"
                                 }
                                 
@@ -74,9 +77,5 @@ class ViewController: UIViewController, OmdbDelegate {
         }
     }
     
-    func onShowPoster(poster: String) {
-        print(poster)
-    }
-
 }
 
