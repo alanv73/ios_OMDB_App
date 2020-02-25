@@ -52,8 +52,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         
         var msgError: String = ""
         var msgOutput = ""
+        var movieTitle = txtInput.text!.replacingOccurrences(of: " ", with: "+")
+        movieTitle = movieTitle.replacingOccurrences(of: "’", with: "\'")
         
-        let apiUrl = "https://www.omdbapi.com/?t=" + txtInput.text!.replacingOccurrences(of: " ", with: "+") + "&apikey=" + api_key
+        let apiUrl = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=" + api_key
         
         if let url = URL(string: apiUrl) {
         
@@ -89,7 +91,13 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
                                 
                                 print(jsonResult)
 
-                                self.posterURL = jsonResult["Poster"] as! String
+                                if jsonResult["Poster"] as! String == "N/A" {
+                                    self.posterURL = ""
+                                } else {
+                                    self.posterURL = jsonResult["Poster"] as! String
+                                }
+                                
+                                print(self.posterURL)
                                 
                                 DispatchQueue.main.sync(execute: {
                                     self.btnPoster.isHidden = false
