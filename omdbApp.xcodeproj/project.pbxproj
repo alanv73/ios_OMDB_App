@@ -17,6 +17,8 @@
 		C20339F223FF010B0000E396 /* omdbAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20339F123FF010B0000E396 /* omdbAppUITests.swift */; };
 		C2A4068F24044D8000E73DAA /* PosterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4068E24044D8000E73DAA /* PosterController.swift */; };
 		E7763D12240323DB00196992 /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7763D11240323DB00196992 /* DataDelegate.swift */; };
+		E7E67EF52404A5E1008EBF42 /* movie-reel.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E67EF42404A5E1008EBF42 /* movie-reel.png */; };
+		E7E67EF72404A758008EBF42 /* film-ticket.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E67EF62404A758008EBF42 /* film-ticket.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C20339F323FF010B0000E396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A4068E24044D8000E73DAA /* PosterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterController.swift; sourceTree = "<group>"; };
 		E7763D11240323DB00196992 /* DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegate.swift; sourceTree = "<group>"; };
+		E7E67EF42404A5E1008EBF42 /* movie-reel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "movie-reel.png"; path = "../../../../onedrive/#IT217-iOS/img/movie-reel.png"; sourceTree = "<group>"; };
+		E7E67EF62404A758008EBF42 /* film-ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "film-ticket.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				C2A4068E24044D8000E73DAA /* PosterController.swift */,
 				C20339D523FF010A0000E396 /* Main.storyboard */,
 				C20339D823FF010B0000E396 /* Assets.xcassets */,
+				E7E67EF42404A5E1008EBF42 /* movie-reel.png */,
+				E7E67EF62404A758008EBF42 /* film-ticket.png */,
 				C20339DA23FF010B0000E396 /* LaunchScreen.storyboard */,
 				C20339DD23FF010B0000E396 /* Info.plist */,
 				E7763D11240323DB00196992 /* DataDelegate.swift */,
@@ -239,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20339DC23FF010B0000E396 /* LaunchScreen.storyboard in Resources */,
+				E7E67EF52404A5E1008EBF42 /* movie-reel.png in Resources */,
 				C20339D923FF010B0000E396 /* Assets.xcassets in Resources */,
 				C20339D723FF010A0000E396 /* Main.storyboard in Resources */,
+				E7E67EF72404A758008EBF42 /* film-ticket.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
