@@ -44,6 +44,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     @IBAction func btnClear(_ sender: Any) {
         txtInput.text = ""
+        lblOutput.text = ""
+        posterURL = ""
         txtInput.becomeFirstResponder()
     }
     
